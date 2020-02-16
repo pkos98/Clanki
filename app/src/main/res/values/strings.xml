@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Clanki</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="create_new_deck">Create a new deck</string>
+    <string name="rename_deck">Rename deck with</string>
+    <string name="delete_deck">Delete deck</string>
+    <string name="deck_name">deckName</string>
+
+</resources>

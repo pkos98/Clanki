@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dest_deck_list_fragment">
+
+    <fragment
+        android:id="@+id/dest_deck_list_fragment"
+        android:name="dev.pkos98.clanki.ui.DeckListFragment"
+        android:label="fragment_deck_list"
+        tools:layout="@layout/fragment_deck_list">
+        <action
+            android:id="@+id/action_open_deck_session"
+            app:destination="@id/dest_deck_session_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_open_deck_list_bottom_sheet"
+            app:destination="@id/dest_dialog_deck_list_bottom_sheet"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+        <action
+            android:id="@+id/action_open_deck_details"
+            app:destination="@id/dest_deck_details_fragment"
+            app:enterAnim="@anim/fragment_fade_enter"
+            app:exitAnim="@anim/fragment_fade_exit" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/dest_dialog_deck_list_bottom_sheet"
+        android:name="dev.pkos98.clanki.ui.DeckDetailsBottomSheetFragment"
+        tools:layout="@layout/fragment_deck_details_bottom_sheet">
+        <argument
+            android:name="deckViewModel"
+            app:argType="dev.pkos98.clanki.viewmodel.DeckViewModel" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/dest_deck_session_fragment"
+        android:name="dev.pkos98.clanki.DeckSessionFragment"
+        android:label="fragment_deck_session"
+        tools:layout="@layout/fragment_deck_session">
+        <argument
+            android:name="deck"
+            app:argType="dev.pkos98.clanki.viewmodel.DeckViewModel"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dest_deck_details_fragment"
+        android:name="dev.pkos98.clanki.ui.DeckDetailsFragment"
+        android:label="fragment_deck_details"
+        tools:layout="@layout/fragment_deck_details">
+        <argument
+            android:name="deckViewModel"
+            app:argType="dev.pkos98.clanki.viewmodel.DeckViewModel"
+            app:nullable="false" />
+    </fragment>
+
+</navigation>

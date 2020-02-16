@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/crd_learn_card"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:id="@+id/lbl_card_front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top" />
+
+        <TextView
+            android:id="@+id/lbl_card_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:visibility="invisible" />
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
